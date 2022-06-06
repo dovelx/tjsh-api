@@ -4,7 +4,7 @@ from runners import pc_login
 #list_a = pc_login.selogin()
 # cookie = list_a[0]
 # csrf = list_a[1]
-cookie = {'JSESSIONID': '02644E48ADAC3F180640772243958BBDQzZO0R'}
+cookie = {'JSESSIONID': 'B099C71CDB3981A7A89231F6DDC3E4E1r4Hu1K'}
 #cookie = '667E60D72B457442D01D758D320D7F27mniGS9'
 csrf = 'e2369c62a599456a9976b1b40666310f'
 

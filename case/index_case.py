@@ -366,3 +366,156 @@ caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 16
+caseinfo['name'] = 'hse-hse/HSE_WORK_TASK/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TASK/getMetaData?0.9966394759205981&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 17
+caseinfo['name'] = 'hse-hse/HSE_WORK_TASK/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TASK/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TASK&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22workstatus%22%3Anull%2C%22workname%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.9498687915108064&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 18
+caseinfo['name'] = 'hse-hse/HSE_WORK_TASK/cardAdd'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TASK/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TASK&0.5990031048467857&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 19
+caseinfo['name'] = 'zyyydjb-hse/HSE_WORK_APPOINTMENT_REGISTRATION/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_APPOINTMENT_REGISTRATION/getMetaData?isself=0&0.5480530672746282&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 20
+caseinfo['name'] = 'lsyd-hse/HSE_WORK_TICKET_LSYD_READ/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_LSYD_READ/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TICKET_LSYD_READ&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22workstatus%22%3A%22close%22%2C%22invoicingunit%22%3Anull%2C%22invoicingunitname%22%3Anull%7D&page=1&rows=50&0.7419006655383926&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 21
+caseinfo['name'] = 'rwtz-hse/HSE_WORK_TASK_ACCOUNT/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TASK_ACCOUNT/getMetaData?isself=0&0.965009138270795&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 22
+caseinfo['name'] = 'rwtz-hse/HSE_WORK_TASK_ACCOUNT/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TASK_ACCOUNT/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TASK_ACCOUNT&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22worktickettype%22%3Anull%2C%22workname%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.3953742091178154&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 23
+caseinfo['name'] = 'zyptz-hse/HSE_WORK_TICKET_ACCOUNT/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_ACCOUNT/getMetaData?isself=0&0.7851079264033038&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 24
+caseinfo['name'] = 'zyptz-hse/HSE_WORK_TICKET_ACCOUNT/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_ACCOUNT/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TICKET_ACCOUNT&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22worktype%22%3Anull%2C%22close_type%22%3Anull%2C%22workstatus%22%3Anull%2C%22workname%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.8850491451191946&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 25
+caseinfo['name'] = 'zyptz-hse/HSE_WORK_TICKET_XKZ_GB/cardRead'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_XKZ_GB/cardRead?parentEntityId=2000000067064&parentFuncCode=HSE_WORK_TICKET_ACCOUNT&topEntityId=2000000067064&topFuncCode=HSE_WORK_TICKET_ACCOUNT&editId=2000000067064&0.7268140995999566&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 26
+caseinfo['name'] = 'gbyczyptz-hse/HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION/getMetaData?isself=0&0.09270167578639743&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 27
+caseinfo['name'] = 'gbyczyptz-hse/HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22worktype%22%3Anull%2C%22level_upgrade%22%3Anull%2C%22close_type%22%3Anull%2C%22workname%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.17589674427268354&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 28
+caseinfo['name'] = 'gbyczyptz-hse/HSE_WORK_TICKET_SX_CLOSE/cardRead'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_TICKET_SX_CLOSE/cardRead?parentEntityId=2000000067060&parentFuncCode=HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION&topEntityId=2000000067060&topFuncCode=HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION&editId=2000000067060&0.6421611070572617&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 29
+caseinfo['name'] = 'cbscj-hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/getMetaData?isself=0&0.2911704843199747&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 30
+caseinfo['name'] = 'cbscj-hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22wf_audit_state%22%3Anull%2C%22workname%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.8908583149251241&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 31
+caseinfo['name'] = 'cbscj-hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardAdd'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE&0.41046879927480573&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 32
+caseinfo['name'] = 'cbscj-hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardRead'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000000920&topFuncCode=HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE&dataId=2000000000920&editId=2000000000920&0.06493400829743701&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())

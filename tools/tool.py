@@ -8,9 +8,16 @@ import execjs
 def ran_name_with_str():
     salt = ''.join(random.sample(string.ascii_letters+string.digits,6))
     now = datetime.datetime.now()
-    salt = now.strftime("%Y-%m-%d %H:%M:%S")
+    #salt = now.strftime("%Y-%m-%d %H:%M:%S")
     name = "Created_by_David_" + salt
     return  name
+
+def ran_code_with_str():
+    salt = ''.join(random.sample(string.ascii_letters+string.digits,6))
+    now = datetime.datetime.now()
+    #salt = now.strftime("%Y-%m-%d %H:%M:%S")
+    code = salt + '001'
+    return  code
 
 def getEntryPwd(encryptType,pwd,modulus,publicExponent):
     # 返回加密后的密码

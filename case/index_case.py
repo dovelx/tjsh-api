@@ -347,7 +347,7 @@ url = '/hse/HSE_JSA_TEMPLETE_NEW/getMetaData?isself=0&0.34123617052814637&conten
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
-testsuit.append(caseinfo.copy())
+#testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 14
 caseinfo['name'] = 'jsa-hse/HSE_JSA_TEMPLETE_NEW/listQuery'
@@ -356,7 +356,7 @@ url = '/hse/HSE_JSA_TEMPLETE_NEW/listQuery?parentEntityId=&parentFuncCode=&topEn
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
-testsuit.append(caseinfo.copy())
+#testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 15
 caseinfo['name'] = 'jsa-hse/HSE_WORK_TICKET_GB_SGZY/cardAdd'
@@ -515,6 +515,33 @@ caseinfo['id'] = 32
 caseinfo['name'] = 'cbscj-hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardRead'
 caseinfo['isactive'] = 1
 url = '/hse/HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000000920&topFuncCode=HSE_WORK_APPOINT_CONTRACTOR_UNDERTAKE&dataId=2000000000920&editId=2000000000920&0.06493400829743701&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 33
+caseinfo['name'] = 'mbcd-hse/HSE_TICKET_MBCD/getMetaData'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_TICKET_MBCD/getMetaData?isself=0&0.5326787792030729&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 34
+caseinfo['name'] = 'mbcd-hse/HSE_TICKET_MBCD/listQuery'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_TICKET_MBCD/listQuery?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_TICKET_MBCD&queryParam=%7B%22tableName%22%3Anull%2C%22columnValues%22%3Anull%2C%22workstatus%22%3Anull%2C%22device%22%3A%22%E6%B5%8B%E8%AF%95%22%7D&page=1&rows=50&0.9133451988422372&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 35
+caseinfo['name'] = 'mbcd-se/HSE_TICKET_MBCD/cardAdd'
+caseinfo['isactive'] = 1
+url = '/hse/HSE_TICKET_MBCD/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_TICKET_MBCD&0.6087652833042487&contentType=json&ajax=true&tid=2000000002404'
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data

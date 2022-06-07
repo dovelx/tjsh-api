@@ -29,41 +29,13 @@ testdb_test = MyDB('./config/dbconfig.conf', projectname)
 sql_query_ticket = sqls.ticket
 sql_query_ts = sqls.ts
 sql_query_worktaskid = sqls.worktaskid
-sql_query_worktaskid1 = sqls.worktaskid1
-sql_query_work_appoint_id =sqls.appoint_id
-sql_query_work_jsaid = sqls.sql_query_work_jsaid
-sql_query_work_safeclarid = sqls.sql_query_work_safeclarid
+sql_query_worktaskid_in_ticketable = sqls.worktaskid_in_ticketable
+
 sql_query_work_appointid = sqls.sql_query_work_appointid
-sql_query_jsa_worknumber = sqls.sql_query_jsa_worknumber
-sql_query_jsa_workname = sqls.sql_query_jsa_workname
-workticketmbcdid = sqls.workticketmbcdid
+
 logger.info('开始数据库查询')
 
-#
-temp = testdb_test.select_one_record(sql_query_jsa_workname)
-sql_query_jsa_workname = temp[0]
 
-#
-'''
-sql_query_jsa_workname = sql_query_jsa_workname[0]
-sql_query_jsa_workname = sql_query_jsa_workname.decode('utf-8')
-print("table-hse_safety_task:jsa_workname",sql_query_jsa_workname)
-'''
-#
-temp = testdb_test.select_one_record(sql_query_jsa_worknumber)
-sql_query_jsa_worknumber = temp[0]
-#
-'''
-sql_query_jsa_worknumber = sql_query_jsa_worknumber[0]
-sql_query_jsa_worknumber = sql_query_jsa_worknumber.decode('utf-8')
-print("table-hse_safety_task:jsa_worknumber",sql_query_jsa_worknumber)
-'''
-#
-temp = testdb_test.select_one_record(workticketmbcdid)
-workticketmbcdid = temp[0]
-#
-workticketmbcdid = workticketmbcdid[0]
-print("table-hse_ticket_mbcd:workticketmbcdid",workticketmbcdid)
 
 #
 temp = testdb_test.select_one_record(sql_query_ticket)
@@ -90,27 +62,13 @@ worktaskid = worktaskid[0]
 print("table-hse_work_task:worktaskid(作业任务提交)",worktaskid)
 
 #
-temp = testdb_test.select_one_record(sql_query_worktaskid1)
+temp = testdb_test.select_one_record(sql_query_worktaskid_in_ticketable)
 sql_query__worktaskid1 = temp[0]
 #worktaskid
 worktaskid1 = sql_query__worktaskid1[0]
 print("table-hse_work_ticket:worktaskid1（现场确认）",worktaskid1)
 
-'''
-temp = testdb_test.select_one_record(sql_query_work_jsaid)
-#print(temp)
-jsaid = temp[0]
-#jsaid
-jsaid = jsaid[0]
-print("table-hse_safety_analysis :jsaid",jsaid)
 
-temp = testdb_test.select_one_record(sql_query_work_safeclarid)
-#print(temp)
-safeclarid = temp[0]
-#jsaid
-safeclarid = safeclarid[0]
-print("table-hse_safety_disclosure :safeclarid",safeclarid)
-'''
 #
 temp = testdb_test.select_one_record(sql_query_work_appointid)
 #print(temp)
@@ -118,30 +76,6 @@ sql_query_work_appointid = temp[0]
 #jsaid
 sql_query_work_appointid = sql_query_work_appointid[0]
 print("table-hse_work_appoint：work_appointid",sql_query_work_appointid)
-
-#
-temp = testdb_test.select_one_record(sqls.sql_query_jsa_step_harm_id)
-#print(temp)
-sql_query_jsa_step_harm_id = temp[0]
-#jsaid
-sql_query_jsa_step_harm_id = sql_query_jsa_step_harm_id[0]
-print("table-hap_hse_clsh：sql_query_jsa_step_harm_id",sql_query_jsa_step_harm_id)
-
-#
-temp = testdb_test.select_one_record(sqls.sql_query_jsastepid)
-#print(temp)
-sql_query_jsastepid = temp[0]
-#jsaid
-sql_query_jsastepid = sql_query_jsastepid[0]
-print("table-hse_safety_analysis_harm：sql_query_jsastepid",sql_query_jsastepid)
-
-#
-temp = testdb_test.select_one_record(sqls.sql_query_jsa_step_measure_id)
-#print(temp)
-sql_query_jsa_step_measure_id = temp[0]
-#jsaid
-sql_query_jsa_step_measure_id = sql_query_jsa_step_measure_id[0]
-print("table-hse_safety_analysis_measure：sql_query_jsa_step_measure_id",sql_query_jsa_step_measure_id)
 
 #
 temp = testdb_test.select_one_record(sqls.sql_query_wf_instance)

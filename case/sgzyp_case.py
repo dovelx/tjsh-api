@@ -1,5 +1,7 @@
 #from globalpkg.global_var import sql_query_jsa_step_harm_id
 from tools import tool
+from globalpkg.global_var import worktaskid
+from globalpkg.global_var import workticketid
 
 
 case = '天津预发布环境-PC-施工作业票'
@@ -8,6 +10,7 @@ case = '天津预发布环境-PC-施工作业票'
 starttime = tool.starttime
 endtime = tool.endtime
 now = tool.now
+code = tool.ran_code_with_str()
 
 #作业任务名称
 name = tool.ran_name_with_str()
@@ -27,6 +30,15 @@ caseinfo['isactive'] = ''
 
 count =0
 host='https://tjsh.ushayden.com'
+worktaskid = worktaskid + 1
+dhworkticketid = workticketid + 4
+sxticketid = workticketid + 5
+lsydticketid = workticketid + 2
+dtworkid = workticketid + 3
+mbcdticketid = workticketid + 6
+dzticketid = workticketid + 7
+gcticketid = workticketid + 8
+xkzticketid = workticketid + 1
 #用例信息
 caseinfo['id'] = 1
 caseinfo['name'] = '施工作业票保存'
@@ -74,7 +86,7 @@ data = {
 	"lock_status": "",
 	"hse_notice_id": 1000000131631,
 	"notice_code": "030000939252",
-	"workname": "api-data",
+	"workname": name,
 	"equipmentnumber": "weihao-data",
 	"workunit": 2000000008565,
 	"workunitname": "天津石化公司",
@@ -184,7 +196,7 @@ data = {
 	"gas_standard_type": "",
 	"eq_position": "",
 	"workticket_name": name,
-	"workticketid": 2000000066878,
+	"workticketid": xkzticketid,
 	"hse_notice_id": 1000000131631,
 	"notice_code": "030000939252",
 	"eqp_id": "",
@@ -215,6 +227,7 @@ data = {
 	"mandatory": 1,
 	"poison": "api-weixianwu"
 }
+
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
@@ -223,8 +236,9 @@ caseinfo['name'] = '动火票保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_DH/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066905&ts=1654127999825&0.5352415650758255&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_DH/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654127999825&0.5352415650758255&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,dhworkticketid)
 caseinfo['url'] = host+ url
+
 #动火票数据
 data = {
 	"tableName": "hse_work_ticket",
@@ -305,8 +319,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066905,
-	"worktaskid": 2000000036751,
+	"workticketid": dhworkticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "dh",
 	"territorialunitid": 2000000008565,
@@ -317,8 +331,8 @@ data = {
 	"worklevel": "gb_dh_workLevel02",
 	"site": "api-didian",
 	"workway": "gb_dhfs02",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -428,7 +442,7 @@ caseinfo['name'] = '受限票保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_SX/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066906&ts=1654127999876&0.7637517217667551&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_SX/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654127999876&0.7637517217667551&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,sxticketid)
 caseinfo['url'] = host+ url
 #受限票数据
 data = {
@@ -441,7 +455,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -510,8 +524,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066906,
-	"worktaskid": 2000000036751,
+	"workticketid": sxticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "sx",
 	"territorialunitid": 2000000008565,
@@ -522,8 +536,8 @@ data = {
 	"worklevel": "gb_sx_workLevel02",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -628,12 +642,12 @@ data = {
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
-caseinfo['id'] = 4
+caseinfo['id'] = 5
 caseinfo['name'] = '盲板抽堵保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_MBCD/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066907&ts=1654130239299&0.9388415625519175&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_MBCD/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654130239299&0.9388415625519175&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,mbcdticketid)
 caseinfo['url'] = host+ url
 #盲板抽堵票数据
 data = {
@@ -646,7 +660,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -688,9 +702,9 @@ data = {
 	"dataStatus": 0,
 	"ver": 1,
 	"created_by": 2000000587804,
-	"created_dt": "2022-06-02 07:59:59",
+	"created_dt": now,
 	"updated_by": 2000000587804,
-	"updated_dt": "2022-06-02 08:37:19",
+	"updated_dt": now,
 	"df": 0,
 	"tenantid": 2000000002404,
 	"ts": 1654130239299,
@@ -714,8 +728,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066907,
-	"worktaskid": 2000000036751,
+	"workticketid": mbcdticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "mbcd",
 	"territorialunitid": 2000000008565,
@@ -726,8 +740,8 @@ data = {
 	"worklevel": "",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -832,12 +846,12 @@ data = {
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
-caseinfo['id'] = 5
+caseinfo['id'] = 6
 caseinfo['name'] = '高处作业保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_GC/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066909&ts=1654128000082&0.7977622176062364&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_GC/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654128000082&0.7977622176062364&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,gcticketid)
 caseinfo['url'] = host+ url
 #
 data = {
@@ -850,7 +864,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -892,9 +906,9 @@ data = {
 	"dataStatus": 0,
 	"ver": 1,
 	"created_by": 2000000587804,
-	"created_dt": "2022-06-02 08:00:00",
+	"created_dt": now,
 	"updated_by": 2000000587804,
-	"updated_dt": "2022-06-02 08:00:00",
+	"updated_dt": now,
 	"df": 0,
 	"tenantid": 2000000002404,
 	"ts": 1654128000082,
@@ -918,8 +932,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066909,
-	"worktaskid": 2000000036751,
+	"workticketid": gcticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "gc",
 	"territorialunitid": 2000000008565,
@@ -930,8 +944,8 @@ data = {
 	"worklevel": "gb_gc_workLevel02",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -1010,7 +1024,7 @@ data = {
 	"level_upgrade": 0,
 	"loadgoodsname": "",
 	"loadhigh": "",
-	"worktask_name": "api-data",
+	"worktask_name": name,
 	"worktype_name": "高处作业",
 	"dz_craneno": "",
 	"gas_standard_type": "",
@@ -1036,12 +1050,12 @@ data = {
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
-caseinfo['id'] = 6
+caseinfo['id'] = 7
 caseinfo['name'] = '吊装作业保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_DZ/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066908&ts=1654128000031&0.874746847627214&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_DZ/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654128000031&0.874746847627214&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,dzticketid)
 caseinfo['url'] = host+ url
 #
 data = {
@@ -1054,7 +1068,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -1096,9 +1110,9 @@ data = {
 	"dataStatus": 0,
 	"ver": 1,
 	"created_by": 2000000587804,
-	"created_dt": "2022-06-02 08:00:00",
+	"created_dt": now,
 	"updated_by": 2000000587804,
-	"updated_dt": "2022-06-02 08:00:00",
+	"updated_dt": now,
 	"df": 0,
 	"tenantid": 2000000002404,
 	"ts": 1654128000031,
@@ -1122,8 +1136,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066908,
-	"worktaskid": 2000000036751,
+	"workticketid": dzticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "dz",
 	"territorialunitid": 2000000008565,
@@ -1134,8 +1148,8 @@ data = {
 	"worklevel": "gb_dz_workLevel01",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime":starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -1214,7 +1228,7 @@ data = {
 	"level_upgrade": 0,
 	"loadgoodsname": "大吊车",
 	"loadhigh": "",
-	"worktask_name": "api-data",
+	"worktask_name": name,
 	"worktype_name": "吊装作业",
 	"dz_craneno": "",
 	"gas_standard_type": "",
@@ -1240,12 +1254,12 @@ data = {
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
-caseinfo['id'] = 7
+caseinfo['id'] = 8
 caseinfo['name'] = '临时用电作业票保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_LSYD/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066903&ts=1654127999724&0.04435546768951926&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_LSYD/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654127999724&0.04435546768951926&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,lsydticketid)
 caseinfo['url'] = host+ url
 #
 data = {
@@ -1258,7 +1272,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -1300,9 +1314,9 @@ data = {
 	"dataStatus": 0,
 	"ver": 1,
 	"created_by": 2000000587804,
-	"created_dt": "2022-06-02 07:59:59",
+	"created_dt": now,
 	"updated_by": 2000000587804,
-	"updated_dt": "2022-06-02 07:59:59",
+	"updated_dt": now,
 	"df": 0,
 	"tenantid": 2000000002404,
 	"ts": 1654127999724,
@@ -1326,8 +1340,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066903,
-	"worktaskid": 2000000036751,
+	"workticketid": lsydticketid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "lsyd",
 	"territorialunitid": 2000000008565,
@@ -1338,8 +1352,8 @@ data = {
 	"worklevel": "",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -1418,7 +1432,7 @@ data = {
 	"level_upgrade": 0,
 	"loadgoodsname": "",
 	"loadhigh": "",
-	"worktask_name": "api-data",
+	"worktask_name": name,
 	"worktype_name": "临时用电",
 	"dz_craneno": "",
 	"gas_standard_type": "",
@@ -1444,12 +1458,12 @@ data = {
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
-caseinfo['id'] = 8
+caseinfo['id'] = 9
 caseinfo['name'] = '动土作业票保存'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
-url = '/hse/HSE_WORK_TICKET_DT/cardSave?parentEntityId=2000000036751&parentFuncCode=HSE_WORK_TASK&topEntityId=2000000036751&topFuncCode=HSE_WORK_TASK&dataId=2000000066904&ts=1654127999773&0.7196459975156992&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_DT/cardSave?parentEntityId=%d&parentFuncCode=HSE_WORK_TASK&topEntityId=%d&topFuncCode=HSE_WORK_TASK&dataId=%d&ts=1654127999773&0.7196459975156992&contentType=json&ajax=true&tid=2000000002404'%(worktaskid,worktaskid,dtworkid)
 caseinfo['url'] = host+ url
 #
 data = {
@@ -1462,7 +1476,7 @@ data = {
 	"radiosourcenum": "",
 	"relevantdoc": "",
 	"jsa_code": "",
-	"register_time": "2022-06-01 16:05:51",
+	"register_time": now,
 	"relation": "",
 	"territorialdeptid": "",
 	"iscontractor": "",
@@ -1504,9 +1518,9 @@ data = {
 	"dataStatus": 0,
 	"ver": 1,
 	"created_by": 2000000587804,
-	"created_dt": "2022-06-02 07:59:59",
+	"created_dt": now,
 	"updated_by": 2000000587804,
-	"updated_dt": "2022-06-02 07:59:59",
+	"updated_dt": now,
 	"df": 0,
 	"tenantid": 2000000002404,
 	"ts": 1654127999773,
@@ -1530,8 +1544,8 @@ data = {
 	"task_pause": "",
 	"projecttype": "repaire",
 	"is_pause": 0,
-	"workticketid": 2000000066904,
-	"worktaskid": 2000000036751,
+	"workticketid": dtworkid,
+	"worktaskid": worktaskid,
 	"equipmentnumber": "",
 	"worktype": "dt",
 	"territorialunitid": 2000000008565,
@@ -1542,8 +1556,8 @@ data = {
 	"worklevel": "",
 	"site": "api-didian",
 	"workway": "",
-	"planstarttime": "2022-06-06 11:07:41",
-	"planendtime": "2022-06-06 16:07:47",
+	"planstarttime": starttime,
+	"planendtime": endtime,
 	"actualstarttime": "",
 	"actualendtime": "",
 	"otherwork": "",
@@ -1622,7 +1636,7 @@ data = {
 	"level_upgrade": 0,
 	"loadgoodsname": "",
 	"loadhigh": "",
-	"worktask_name": "api-data",
+	"worktask_name": name,
 	"worktype_name": "动土作业",
 	"dz_craneno": "",
 	"gas_standard_type": "",
@@ -1649,7 +1663,7 @@ caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())
 
 
-caseinfo['id'] = 9
+caseinfo['id'] = 10
 caseinfo['name'] = '承包商承接数据复制'
 caseinfo['isactive'] = 1
 #拼写预约URL
@@ -1729,6 +1743,254 @@ data = {
 	"isspecialcondition": "",
 	"specialcondition": "",
 	"iscontainfireday": 0
+}
+caseinfo['data'] =data
+testsuit_sgzyp.append(caseinfo.copy())
+
+
+#用例信息
+caseinfo['id'] = 11
+caseinfo['name'] = '施工作业票提交'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
+url = '/hse/HSE_WORK_TICKET_GB_SGZY/hse_work_ticket_submit?parentEntityId=&parentFuncCode=&topEntityId=%d&topFuncCode=HSE_WORK_TICKET_GB_SGZY&dataId=%d&ts=1654513463146&0.552899247943268&contentType=json&ajax=true&tid=2000000002404'%(xkzticketid,xkzticketid)
+caseinfo['url'] = host+ url
+#施工作业票
+data = {
+	"tableName": "hse_work_ticket",
+	"proposer_id": "",
+	"otherattaches": "",
+	"owner_id": "",
+	"relevantdoc": "",
+	"jsa_code": "",
+	"relation": "",
+	"territorialdeptid": "",
+	"workprojectid": "",
+	"owner_name": "",
+	"tasktype": "",
+	"proposer": "",
+	"territorialdeptcode": "",
+	"equipmentname": "",
+	"close_time": "",
+	"invoicingunitname": "",
+	"invoicingunit": "",
+	"eqp_id": "",
+	"other_worktype": "dh,sx,mbcd,gc,dz,lsyd,dt,fcgzy",
+	"hse_notice_id": 1000000131631,
+	"notice_code": "030000939252",
+	"guid": "",
+	"work_position_point": "",
+	"workprojectname": "",
+	"pipeline_level": "",
+	"replacement": "",
+	"territorialdeptname": "",
+	"is_send_check_gas": "",
+	"radiosourcenum": "",
+	"register_time": "",
+	"iscontractor": "0",
+	"risk_rank": "",
+	"meqp_code": "",
+	"jsaid": "",
+	"audit_starttime": "",
+	"audit_endtime": "",
+	"clause": "",
+	"other_worktype_name": "动火作业,受限空间,盲板抽堵,高处作业,吊装作业,临时用电,动土作业,非常规作业",
+	"worktype__name": "施工作业",
+	"safedistance": "",
+	"meqp_id": "",
+	"workunit_person_name": "",
+	"issjtssxzy": "",
+	"isupgradedh": "",
+	"isdzdh": "",
+	"isrecord": "",
+	"con_personid": "",
+	"eqp_code": "",
+	"excavation_eqp": "",
+	"territorialunitcode": "0001",
+	"workunit_person_id": "",
+	"dataStatus": 0,
+	"ver": 1,
+	"created_by": 2000000587804,
+	"created_dt": now,
+	"updated_by": 2000000587804,
+	"updated_dt": now,
+	"df": 0,
+	"tenantid": 2000000002404,
+	"ts": 1654513463146,
+	"istaskpause": 0,
+	"classgroup": "",
+	"isend": "",
+	"end_reason": "",
+	"end_dt": "",
+	"groundwire_num": "",
+	"groupknife_num": "",
+	"groundwire_code": "",
+	"othercontent": "",
+	"sent_overdueclose_message": 0,
+	"isupgrade": 0,
+	"isfireday": 0,
+	"isdue": 0,
+	"operator": "",
+	"worktimeconsum": "",
+	"device_id": "",
+	"isfillticket": "",
+	"task_pause": "",
+	"projecttype": "repaire",
+	"is_pause": 0,
+	"workticketid": 2000000067245,
+	"worktaskid": "",
+	"equipmentnumber": "weihao-data",
+	"worktype": "xkz",
+	"territorialunitid": 2000000008565,
+	"territorialunitname": "天津石化公司",
+	"applyunitid": 2000000008565,
+	"applyunitname": "天津石化公司",
+	"worknumber": "",
+	"worklevel": "high_risk",
+	"site": "api-didian",
+	"workway": "",
+	"planstarttime": starttime,
+	"planendtime": endtime,
+	"actualstarttime": "",
+	"actualendtime": "",
+	"otherwork": "",
+	"workname": name,
+	"workcontent": "挖掘机",
+	"workunit": 2000000008565,
+	"workunitname": "天津石化公司",
+	"workstatus": "draft",
+	"equipmentpipename": "",
+	"medium": "介质",
+	"temperature": "33",
+	"pressure": "1024",
+	"blindplate_material": "",
+	"blindplate_spec": "",
+	"blindplate_code": "",
+	"blindplate_mapandcode": "",
+	"workhighly": "",
+	"objectmass": "",
+	"poweraccesspoint": "",
+	"workvoltage": "",
+	"equipmentandpower": "",
+	"otherunit": "",
+	"workreason": "",
+	"isharmconfirm": "",
+	"ismeasureconfirm": "",
+	"isgascomplate": "",
+	"issigncomplate": "",
+	"created_by_name": "张海",
+	"updated_by_name": "张海",
+	"closereason": "",
+	"gastestaging": "",
+	"blindplate_worktype": "",
+	"gasket_material": "",
+	"gasket_spec": "",
+	"close_type": "",
+	"delaynum": 999,
+	"beendelaynum": 0,
+	"isppeconfirm": "",
+	"invalidreason": "",
+	"hassafetyplan": "",
+	"hashseplan": "",
+	"hasemergencyplan": "",
+	"hasdrawpaper": "",
+	"haschecklist": "",
+	"hasrescueplan": "",
+	"loadradius": "",
+	"loaddegree": "",
+	"loadrate": "",
+	"objectnorm": "",
+	"loadmass": "",
+	"haslineopensitemap": "",
+	"radiosourcetype": "",
+	"sourcecode": "",
+	"sourcestrength": "",
+	"suprange": "",
+	"controlrange": "",
+	"drawshow": "",
+	"hashookcheck": "",
+	"hasfacadecheck": "",
+	"hasdrivermedical": "",
+	"objectname": "",
+	"cancelreason": "",
+	"hidesituation": "",
+	"work_position_id": "",
+	"isgas_detection": "0",
+	"gas_aging": "",
+	"isqualgasdetection": "",
+	"dig_size_l": "",
+	"dig_size_w": "",
+	"dig_size_h": "",
+	"attaches": "",
+	"lock_status": "",
+	"lock_equipment_id": "",
+	"dl_uuid": "",
+	"dl_time": "",
+	"level_upgrade": "",
+	"loadgoodsname": "",
+	"loadhigh": "",
+	"worktask_name": "",
+	"worktype_name": "施工作业票",
+	"dz_craneno": "",
+	"gas_standard_type": "",
+	"isproprietor": "",
+	"worksite": "",
+	"workticketmbcdid": "",
+	"isstoppower": "",
+	"work_position_name": "",
+	"gas_detector_no": "",
+	"additional_requirements": "",
+	"worklevel_org": "",
+	"wf_current_nodeid": "",
+	"wf_audit_time": "",
+	"wf_current_user": "",
+	"wf_audit_state": "0",
+	"wf_create_user": 2000000587804,
+	"wf_instance": "",
+	"wf_type": "",
+	"isabnormal": "",
+	"abnormaltype": "",
+	"ishas_wtd": "0",
+	"istask": ""
+}
+caseinfo['data'] =data
+testsuit_sgzyp.append(caseinfo.copy())
+
+#用例信息
+caseinfo['id'] = 12
+caseinfo['name'] = '盲板管理-保存'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#http://v3-test-linux-hse.hd-cloud.com/hse/HSE_WORK_TASK/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_WORK_TASK&0.19129330803343048&contentType=json&ajax=true&tid=2000000002503
+url = '/hse/HSE_TICKET_MBCD/cardSave?parentEntityId=&parentFuncCode=&topFuncCode=HSE_TICKET_MBCD&0.2550397275279832&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] = host+ url
+#
+data = {
+	"tableName": "hse_ticket_mbcd",
+	"columnValues": "",
+	"dataStatus": 0,
+	"ver": 1,
+	"created_by": "",
+	"created_dt": now,
+	"updated_by": "",
+	"updated_dt": now,
+	"df": "0",
+	"tenantid": 2000000002404,
+	"ts": "",
+	"blind_type": "",
+	"workstatus": "",
+	"normalproductionstatus": "",
+	"commenceperiodstatus": "",
+	"downmaintenancestatus": "",
+	"mbcdnumber": code,
+	"territorialunitid": 2000000008565,
+	"territorialunitname": "天津石化公司",
+	"territorialunitcode": "0001",
+	"medium": "油气",
+	"temperature": "34",
+	"pressure": "1024",
+	"worksite": "未知"
 }
 caseinfo['data'] =data
 testsuit_sgzyp.append(caseinfo.copy())

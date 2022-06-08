@@ -539,10 +539,65 @@ caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 35
-caseinfo['name'] = 'mbcd-se/HSE_TICKET_MBCD/cardAdd'
+caseinfo['name'] = 'mbcd-hse/HSE_TICKET_MBCD/cardAdd'
 caseinfo['isactive'] = 1
 url = '/hse/HSE_TICKET_MBCD/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=&topFuncCode=HSE_TICKET_MBCD&0.6087652833042487&contentType=json&ajax=true&tid=2000000002404'
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 36
+caseinfo['name'] = '申请人资质台账进入-sy/SY_USER_PERSONAPTITUDE_HSE_SQR/getMetaData'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_SQR/getMetaData?isself=0&0.5033707577229438&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 37
+caseinfo['name'] = '申请人资质台账查看-sy/SY_USER_PERSONAPTITUDE_HSE_SQR/cardRead'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_SQR/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000000160&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_SQR&editId=2000000000160&0.46634425572260807&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 38
+caseinfo['name'] = '申请人资质台账添加-sy/SY_USER_PERSONAPTITUDE_HSE_SQR/cardAdd'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_SQR/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=2000000000160&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_SQR&dataId=2000000000160&0.36665322130135936&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 39
+caseinfo['name'] = '作业人资质台账进入-sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/getMetaData'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/getMetaData?isself=0&0.965675804344089&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 40
+caseinfo['name'] = '作业人资质台账查看-sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/cardRead'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000019954&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_ZYR&dataId=2000000019954&editId=2000000019954&0.857790990075997&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 41
+caseinfo['name'] = '作业人资质台账添加-sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/cardAdd'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_ZYR/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=2000000019954&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_ZYR&dataId=2000000019954&0.47308813775301783&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+

@@ -5,76 +5,49 @@ def login():
     from tools import tool
     import json
     #访问1-主页
-    url = 'https://tjsh.ushayden.com/'
+    #https://tjsh.ushayden.com/passports/login?service=https%3A%2F%2Ftjsh.ushayden.com%2Fportals%2Fcas&tenantCode=tjsh&trial=false
+    url = 'https://tjsh.ushayden.com/passports/login?service=https%3A%2F%2Ftjsh.ushayden.com%2Fportals%2Fcas&tenantCode=tjsh&trial=false'
 
     #访问主页的header
     headers = {
+        "Host": "tjsh.ushayden.com",
+        "Connection": "keep-alive",
+        "Cache-Control": "max-age=0",
         "Upgrade-Insecure-Requests": "1",
         "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
         "sec-ch-ua": "\"Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"97\", \"Chromium\";v=\"97\"",
         "sec-ch-ua-mobile": "\?0",
-        "sec-ch-ua-platform": "Windows"
+        "sec-ch-ua-platform": "Windows",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-User": "\?1",
+        "Sec-Fetch-Dest": "document",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7",
+        "Cookie": "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; CASPRIVACY=""; TGC=""; JSESSIONID=A9CED7DA6C4EC379D7EDC84539A69707ZSSZ3b; module=passports"
     }
     session = requests.Session()
     print("url-1=",url)
     res = session.get(url=url, headers=headers, allow_redirects=False,verify=False)
-
+    print("header-1",res.headers)
     #获取跳转地址，location
-    location_url= res.headers['location']
-    print("获取第二次跳转url",location_url)
+    #location_url= res.headers['location']
+    #print("获取第二次跳转url",location_url)
     cookies = res.headers['Set-Cookie']
 
     #获取首次cookie，产品中也是最终访问cookie
-    searchObj = re.search("jsessionid=(.+?);", cookies, re.M | re.I)
+    searchObj = re.search(" JSESSIONID=(.+?);", cookies, re.M | re.I)
     if searchObj:
 
         cookies = searchObj.group(1)
         print("first cookies found!!", cookies)
     first_cookie = cookies
     b = {}
-    b['Cookie'] = "TENANTCODE=hd; module=passports;JSESSIONID=" + cookies
-
-
-    #访问2-302跳转访问(开始验证部分请求)
-   #访问2-302的header
-    # headers = {
-    #     "Host": "v3-test-linux-passport.hd-cloud.com",
-    #     "Connection": "keep-alive",
-    #     "Upgrade-Insecure-Requests": "1",
-    #     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
-    #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    #     "Accept-Encoding": "gzip, deflate",
-    #     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7",
-    #     "Cookie": "TENANTCODE=hd; module=passports"
-    # }
-
-    # 访问2-302跳转访问(开始验证部分请求)
-    session = requests.Session()
-    #url="http://v3-test-linux-passport.hd-cloud.com/login?service=http%3A%2F%2Fv3-test-linux-portal.hd-cloud.com%2Fcas&tenantCode=hd&trial=false"
-    location_url ='https://tjsh.ushayden.com/passports/login?service=https%3A%2F%2Ftjsh.ushayden.com%2Fportals%2Fcas&tenantCode=tjsh&trial=false'
-    url = location_url
-    print("url-2",url)
-
-    res = session.get(url=url, headers=headers, allow_redirects=False,verify=False)
-    #print(res.headers['location'])
-    print("2-res-heaher",res.headers)
-    cookies = res.headers['Set-Cookie']
-    #print("2-cookies=",cookies)
-    #获取验证阶段的cookie
-    searchObj = re.search("JSESSIONID=(.+?);", cookies, re.M | re.I)
-    if searchObj:
-        # print("searchObj.group() : ", searchObj.group())
-        # print("searchObj.group(1) : ", searchObj.group(1))
-        cookies = searchObj.group(1)
-        print("sec cookies found!!", cookies)
-    #按照产品header格式拼写验证cookie
-    b = {}
-    #Cookie": "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; JSESSIONID=F5A7C35A915DB70BD3CFCFBC5A63238Bc2XNfs; module=passports; TGC=\"\"; CASPRIVACY=\""
-    b['Cookie'] = "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; JSESSIONID=" + first_cookie + "; module=passports; TGC=\"\"; CASPRIVACY=\"\""
-    #print("2-b",b)
-    print("it&excution",res.content)
-    #获取验证it，为拼写密码串使用
+    #"TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; CASPRIVACY=""; TGC=""; JSESSIONID=A9CED7DA6C4EC379D7EDC84539A69707ZSSZ3b; module=passports"
+    b['Cookie'] = "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; CASPRIVACY=""; TGC=""; JSESSIONID=" + cookies + "; module=passports"
+    headers['Cookie'] = b['Cookie']
+    # 获取验证it，为拼写密码串使用
     resb = res.content.decode('utf-8')
     searchObj = re.search("name=\"lt\" value=\"(.+?)\"/>", resb, re.M | re.I)
     if searchObj:
@@ -90,18 +63,34 @@ def login():
         execution = searchObj.group(1)
         print("execution was found!!", execution)
 
-    # # 访问2.1-访问验证图片
-    # headers={
-    #     "Host": "v3-test-linux-passport.hd-cloud.com",
-    #     "Connection": "keep-alive",
-    #     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
-    #     "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
-		# "Referer": "http://v3-test-linux-passport.hd-cloud.com/login?service=http%3A%2F%2Fv3-test-linux-portal.hd-cloud.com%2Fcas&tenantCode=hd&trial=false",
-    #     "Accept-Encoding": "gzip, deflate",
-    #     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7",
-    #     "Cookie": "TENANTCODE=hd; module=passports; JSESSIONID=3C40E9ADD7EB762495CD37882AB1E60F"
-    # }
-    # headers['Cookie'] = b['Cookie']
+
+    session = requests.Session()
+    #url="https://tjsh.ushayden.com/passports/login
+    location_url ='https://tjsh.ushayden.com/passports/login'
+    url = location_url
+    print("url-2",url)
+
+    res = session.get(url=url, headers=headers, allow_redirects=False,verify=False)
+    #print(res.headers['location'])
+    print("2-res-heaher",res.headers)
+    #cookies = res.headers['Set-Cookie']
+    #print("2-cookies=",cookies)
+    # #获取验证阶段的cookie
+    # searchObj = re.search("JSESSIONID=(.+?);", cookies, re.M | re.I)
+    # if searchObj:
+    #     # print("searchObj.group() : ", searchObj.group())
+    #     # print("searchObj.group(1) : ", searchObj.group(1))
+    #     cookies = searchObj.group(1)
+    #     print("sec cookies found!!", cookies)
+    # #按照产品header格式拼写验证cookie
+    # b = {}
+    # #Cookie": "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; JSESSIONID=F5A7C35A915DB70BD3CFCFBC5A63238Bc2XNfs; module=passports; TGC=\"\"; CASPRIVACY=\""
+    # b['Cookie'] = "TENANTCODE=tjsh; tenantCode=tjsh; prjidentify=tjsh; JSESSIONID=" + first_cookie + "; module=passports; TGC=\"\"; CASPRIVACY=\"\""
+
+
+
+
+    #headers['Cookie'] = b['Cookie']
     # url = "http://v3-test-linux-portal.hd-cloud.com/themes/hayden/images/login/captcha.png"
     # res = session.get(url=url, headers=headers, allow_redirects=False)
     # #访问3-登录验证地址
@@ -110,24 +99,16 @@ def login():
     # #print(res.headers)
     # #print("3-",res.content)
     # 访问4-获取公key
-    headers={
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
-        "Accept": "*/*",
-        "sec-ch-ua": "\"Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"97\", \"Chromium\";v=\"97\"",
-        "sec-ch-ua-mobile": "\?0",
-		"Content-type":"application/json",
-        "sec-ch-ua-platform": "Windows"
-    }
+    #headers=headers
     url = 'https://tjsh.ushayden.com/preLogin/getPubKey'
     #https://tjsh.ushayden.com/preLogin/getPubKey
     res = session.get(url=url, headers=headers, allow_redirects=False,verify=False)
-    #print("debug1",res.content)
+    print("debug1",res.content)
     eq = res.content.decode('utf-8')
     eq = json.loads(eq)
     #print(eq)
     #设置登录账号名和密码
-    USER_NAME = "zhai"
+    USER_NAME = "dyy"
     password = "123456"
     # loginStoken = eq['data']['loginStoken']
     encryptType = eq['data']['encryptType']
@@ -282,4 +263,4 @@ def selogin():
     return cookies, csrf
 if __name__=='__main__':
 
-    selogin()
+    login()

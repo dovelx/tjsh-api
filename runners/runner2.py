@@ -125,7 +125,7 @@ def runmobileg(testsuitm):
     #__all__ = ['insert']
     #print(cookies)
     print('用例总数：',len(testsuitm))
-    mheaders = m_login.mlogin(1, 1, 1)
+    mheaders = m_login.mllogin(1, 1, 1)
     for i in range(len(testsuitm)):
 
         caseinfo = testsuitm[i]
@@ -178,7 +178,7 @@ def runmobileg(testsuitm):
                                                        'step_action=\"%s\", expected_results=\"%s\"' \
                                                        ' WHERE executed_history_id = %s AND testcase_id = %s AND step_id = %s' \
                                                        ' AND project=\'%s\' AND testplan=\'%s\'  AND runtime=\'%s\''
-        data = ("pass", fail_or_error_reason, protocol_method, run_time, action_of_step, result_of_step,
+        data = (result_of_step, fail_or_error_reason, protocol_method, run_time, action_of_step, result_of_step,
                 str(case_executed_history_id), testcase_id, step_id,
                 testproject, testplan, '0000-00-00 00:00:00')
         #logger.info('正在更新步骤执行结果')

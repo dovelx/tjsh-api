@@ -155,7 +155,7 @@ def pm(caseinfo,mheaders):
 
 def gm(caseinfo,headers):
     '''移动端 get'''
-    rs = requests.get(url=caseinfo['url'], headers=headers)
+    rs = requests.get(url=caseinfo['url'], headers=headers,verify =False)
     if rs.status_code == 200:
         # 返回值转码
         data = rs.content.decode('utf-8')

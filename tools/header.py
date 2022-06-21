@@ -1,12 +1,14 @@
 from runners import pc_login
 
-#list_a = []
-#list_a = pc_login.selogin()
-# cookie = list_a[0]
-# csrf = list_a[1]
-cookie = {'JSESSIONID': '9E191FAD407FC508F4DA18012AD2519CrYNAKU'}
-#cookie = '667E60D72B457442D01D758D320D7F27mniGS9'
+cookie = {'JSESSIONID': 'F7DB25EB2F3882EBD5F65D4EB1138337nEzl5A'}
 csrf = 'e2369c62a599456a9976b1b40666310f'
+list_a = []
+list_a = pc_login.login()
+cookie = list_a[0]
+csrf = list_a[1]
+
+#cookie = '667E60D72B457442D01D758D320D7F27mniGS9'
+
 
 #作业预约请求头
 headers={

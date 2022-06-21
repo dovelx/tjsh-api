@@ -1955,7 +1955,7 @@ data = {
 	"istask": ""
 }
 caseinfo['data'] =data
-testsuit_sgzyp.append(caseinfo.copy())
+#testsuit_sgzyp.append(caseinfo.copy())
 
 #用例信息
 caseinfo['id'] = 12
@@ -1993,4 +1993,4 @@ data = {
 	"worksite": "未知"
 }
 caseinfo['data'] =data
-testsuit_sgzyp.append(caseinfo.copy())
+#testsuit_sgzyp.append(caseinfo.copy())

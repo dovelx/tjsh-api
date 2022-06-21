@@ -3,7 +3,7 @@ from tools import tool
 
 
 
-case = '天津石化首页接口'
+case = '天津石化PC-Get接口'
 
 #times
 starttime = tool.starttime
@@ -341,13 +341,13 @@ caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 13
-caseinfo['name'] = 'jsa-hse/HSE_JSA_TEMPLETE_NEW/getMetaData'
+caseinfo['name'] = '施工作业票送交'
 caseinfo['isactive'] = 1
-url = '/hse/HSE_JSA_TEMPLETE_NEW/getMetaData?isself=0&0.34123617052814637&contentType=json&ajax=true&tid=2000000002404'
+url = '/hse/HSE_WORK_TICKET_GB_SGZY/wfSendShow?parentEntityId=&parentFuncCode=&topEntityId=2000000095900&topFuncCode=HSE_WORK_TICKET_GB_SGZY&dataId=2000000095900&ts=1655518105577&0.4238209574662122&contentType=json&ajax=true&tid=2000000002404'
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
-#testsuit.append(caseinfo.copy())
+testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 14
 caseinfo['name'] = 'jsa-hse/HSE_JSA_TEMPLETE_NEW/listQuery'
@@ -455,7 +455,7 @@ url = '/hse/HSE_WORK_TICKET_XKZ_GB/cardRead?parentEntityId=2000000067064&parentF
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
-testsuit.append(caseinfo.copy())
+#testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 26
 caseinfo['name'] = 'gbyczyptz-hse/HSE_WORK_TICKET_ACCOUNT_CLOSEEXCEPTION/getMetaData'
@@ -601,3 +601,57 @@ data = {}
 caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
 
+
+caseinfo['id'] = 42
+caseinfo['name'] = '监护人资质台账进入-sy/SY_USER_PERSONAPTITUDE_HSE_JHR/getMetaData'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_JHR/getMetaData?isself=0&0.26076720793894625&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 43
+caseinfo['name'] = '监护人资质台账查看-sy/SY_USER_PERSONAPTITUDE_HSE_JHR/cardRead'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_JHR/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000000699&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_JHR&editId=2000000000699&0.12538968393758565&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 44
+caseinfo['name'] = '监护人资质台账添加-sy/SY_USER_PERSONAPTITUDE_HSE_JHR/cardAdd'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_JHR/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=2000000000699&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_JHR&dataId=2000000000699&0.8772704820331805&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 45
+caseinfo['name'] = '批准人资质台账进入-sy/SY_USER_PERSONAPTITUDE_HSE_PZR/getMetaData'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_PZR/getMetaData?isself=0&0.3360141982327147&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 46
+caseinfo['name'] = '批准人资质台账查看-sy/SY_USER_PERSONAPTITUDE_HSE_PZR/cardRead'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_PZR/cardRead?parentEntityId=&parentFuncCode=&topEntityId=2000000019974&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_PZR&dataId=2000000019974&editId=2000000019974&0.5735577424849185&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 47
+caseinfo['name'] = '批准人资质台账添加-sy/SY_USER_PERSONAPTITUDE_HSE_PZR/cardAdd'
+caseinfo['isactive'] = 1
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_PZR/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=2000000019974&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_PZR&dataId=2000000019974&0.4692925367905503&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+testsuit.append(caseinfo.copy())

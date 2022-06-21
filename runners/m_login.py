@@ -71,6 +71,18 @@ def mlogin (host,username,password):
     print(headers)
     return  headers
 
+def mllogin (host,username,password):
+    headers = {
+        "Accept": "application/json",
+        "Accept-Encoding": "gzip",
+        "user-agent": "RS801D(Android/7.0) (com.hayden.hap.fv/1.0.2) Weex/0.16.0 1080x1920",
+        "Content-Type": "application/json;charset=UTF-8",
+        "st": "m_login_user_stoken_ff25244c5400427a8859bd4eef65fe57",
+        "tid": "2000000002404"
+
+    }
+    print(headers)
+    return  headers
 if __name__=='__main__':
     mlogin(1,2,3)
 

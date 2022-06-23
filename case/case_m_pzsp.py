@@ -1324,3 +1324,410 @@ data = {
 }
 caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())
+
+
+caseinfo['id'] = 5
+caseinfo['name'] = '会签-1-业主方开票人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign
+url = '/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=%d&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"longitude": 117.142791,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"uuid": 1655980851457,
+			"latitude": 31.8353,
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"idnumber": "",
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍",
+			"person_name": "魏巍",
+			"userid": 2000000119297
+		}],
+		"isEnd": 0,
+		"is_push_task": 0,
+		"longitude": 117.142791,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 0,
+		"isexmaineable": 1,
+		"code": "2000000015763",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 1,
+		"isbrushposition": 1,
+		"groupType": "4",
+		"name": "业主方开票人",
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 1
+	}],
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"longitude": 117.142791,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"uuid": 1655980851457,
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"idnumber": "",
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍",
+		"person_name": "魏巍",
+		"userid": 2000000119297
+	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+caseinfo['id'] = 6
+caseinfo['name'] = '会签-2-施工方现场负责人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign&ismulti=1
+url = '/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=%d&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign&ismulti=1'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"longitude": 117.142791,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"uuid": 1655981340356,
+			"latitude": 31.8353,
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"idnumber": "",
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍",
+			"person_name": "魏巍",
+			"userid": 2000000119297
+		}],
+		"isEnd": 0,
+		"is_push_task": 0,
+		"longitude": 117.142791,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 1,
+		"isexmaineable": 1,
+		"code": "2000000015764",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 2,
+		"isbrushposition": 1,
+		"groupType": "4",
+		"name": "施工方现场负责人",
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 1
+	}],
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"longitude": 117.142791,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"uuid": 1655981340356,
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"idnumber": "",
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍",
+		"person_name": "魏巍",
+		"userid": 2000000119297
+	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+
+caseinfo['id'] = 7
+caseinfo['name'] = '会签-3-作业人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign&ismulti=1
+url = '/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=%d&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign&ismulti=1'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"longitude": 117.142791,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"uuid": 1655981409196,
+			"latitude": 31.8353,
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"idnumber": "",
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍",
+			"person_name": "魏巍",
+			"userid": 2000000119297
+		}],
+		"isEnd": 0,
+		"is_push_task": 0,
+		"longitude": 117.142791,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 1,
+		"isexmaineable": 1,
+		"code": "2000000015762",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 4,
+		"isbrushposition": 1,
+		"groupType": "4",
+		"name": "作业人",
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 1
+	}],
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"longitude": 117.142791,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"uuid": 1655981409196,
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"idnumber": "",
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍",
+		"person_name": "魏巍",
+		"userid": 2000000119297
+	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+caseinfo['id'] = 8
+caseinfo['name'] = '会签-3-监护人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign
+url = '/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=%d&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign&ismulti=1'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"longitude": 117.142791,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"uuid": 1655981490642,
+			"latitude": 31.8353,
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"idnumber": "",
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍",
+			"person_name": "魏巍",
+			"userid": 2000000119297
+		}],
+		"isEnd": 0,
+		"is_push_task": 0,
+		"longitude": 117.142791,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 1,
+		"isexmaineable": 1,
+		"code": "2000000015766",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 6,
+		"isbrushposition": 1,
+		"groupType": "4",
+		"name": "监护人",
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 1
+	}],
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"longitude": 117.142791,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"uuid": 1655981490642,
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"idnumber": "",
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍",
+		"person_name": "魏巍",
+		"userid": 2000000119297
+	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+caseinfo['id'] = 9
+caseinfo['name'] = '会签-3-审批人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign
+url = '/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=%d&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"longitude": 117.142791,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"uuid": 1655981556621,
+			"latitude": 31.8353,
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"idnumber": "",
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍",
+			"person_name": "魏巍",
+			"userid": 2000000119297
+		}],
+		"isEnd": 1,
+		"is_push_task": 0,
+		"longitude": 117.142791,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 0,
+		"isexmaineable": 1,
+		"code": "2000000015768",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 10,
+		"isbrushposition": 1,
+		"groupType": "4",
+		"name": "审批人",
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 10
+	}],
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"longitude": 117.142791,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"uuid": 1655981556621,
+		"latitude": 31.8353,
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"idnumber": "",
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍",
+		"person_name": "魏巍",
+		"userid": 2000000119297
+	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())

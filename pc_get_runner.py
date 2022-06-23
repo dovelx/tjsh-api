@@ -1,7 +1,7 @@
-#天津石化作业许可-PC-施工作业票保存-提交
-#from case.case_pc_post import  *
-from case.case_pc_sgzyp import *
-#from case.case_m_get import *
+#天津石化作业许可-PC-预约-安全-申请-作业票提交
+from case.case_pc_post import  *
+from case.case_pc_get import *
+from case.case_m_get import *
 
 from htmlreporter import HtmlReport
 from sendmail import MyMail
@@ -24,9 +24,9 @@ start_time = datetime.datetime.now()
 
 #执行测试
 #PC-GET
-#runner3.runcase_producion(testsuit)
+runner3.runcase_producion(testsuit)
 #PC-POST
-runner3.runcase_post(testsuitmp)
+#runner3.runcase_post(testsuit_sgzyp)
 #mobile
 #runner2.runmobileg(testsuitmg)
 # 记录测试结束时间
@@ -69,17 +69,17 @@ logger.info('生成测试报告成功%s',name)
 #
 #     logger.info('生成测试报告成功')
 #
-mymail = MyMail('./config/mail.conf')
-mymail.connect()
-mymail.login()
-mail_content = 'Hi，附件为接口测试报告，烦请查阅'
-mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
-logger.info(html_report.get_filename())
-attachments = set([html_report.get_filename()])
-
-logger.info('正在发送测试报告邮件...')
-mymail.send_mail(mail_tiltle, mail_content, attachments)
-mymail.quit()
-
-logger.info('发送邮件成功')
-logger.info("-------------------------------------THE_END----------------------------------------------------------------------")
+#     mymail = MyMail('./config/mail.conf')
+#     mymail.connect()
+#     mymail.login()
+#     mail_content = 'Hi，附件为接口测试报告，烦请查阅'
+#     mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
+#     logger.info(html_report.get_filename())
+#     attachments = set([html_report.get_filename()])
+#
+#     logger.info('正在发送测试报告邮件...')
+#     mymail.send_mail(mail_tiltle, mail_content, attachments)
+#     mymail.quit()
+#
+#     logger.info('发送邮件成功')
+#     logger.info("-------------------------------------THE_END----------------------------------------------------------------------")

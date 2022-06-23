@@ -13,7 +13,7 @@ worktaskid_in_ticketable = 'select worktaskid from hse_work_ticket ORDER BY crea
 sql_query_work_appointid ='SELECT work_appoint_id from hse_work_appoint ORDER BY  created_dt desc LIMIT 1'
 
 sql_query_wf_instance ='SELECT wf_instance from hse_work_appoint ORDER BY  created_dt desc LIMIT 1'
-
+sql_query_measureid = 'select worktaskmeasureid from hse_work_task_measure ORDER BY worktaskmeasureid desc LIMIT 1;'
 
 
 

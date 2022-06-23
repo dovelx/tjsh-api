@@ -1,5 +1,6 @@
 from tools import tool
 from globalpkg.global_var import workticketid
+from globalpkg.global_var import measureid
 
 case = '天津石化APP-票证审批和作业处理'
 
@@ -24,6 +25,12 @@ caseinfo['sign'] =''
 caseinfo['exresult'] = ''
 caseinfo['isactive'] = ''
 xkzworkticketid = workticketid
+measureid = measureid-39+1
+ms = [0]*39
+
+for i in range(39):
+    ms[i] = measureid+i
+
 
 count =0
 #用例信息
@@ -139,7 +146,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894600,
+		"worktaskmeasureid": ms[0],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -167,7 +174,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894601,
+		"worktaskmeasureid": ms[1],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -195,7 +202,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894602,
+		"worktaskmeasureid": ms[2],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -223,7 +230,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894603,
+		"worktaskmeasureid": ms[3],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -251,7 +258,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894604,
+		"worktaskmeasureid": ms[4],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -279,7 +286,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894605,
+		"worktaskmeasureid": ms[5],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -307,7 +314,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894606,
+		"worktaskmeasureid": ms[6],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -335,7 +342,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894607,
+		"worktaskmeasureid":ms[7],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -363,7 +370,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894608,
+		"worktaskmeasureid": ms[8],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -391,7 +398,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894609,
+		"worktaskmeasureid": ms[9],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -419,7 +426,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894610,
+		"worktaskmeasureid": ms[10],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -447,7 +454,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894611,
+		"worktaskmeasureid": ms[11],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -475,7 +482,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894612,
+		"worktaskmeasureid": ms[12],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -503,7 +510,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894613,
+		"worktaskmeasureid": ms[13],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -531,7 +538,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894614,
+		"worktaskmeasureid": ms[14],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -559,7 +566,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894615,
+		"worktaskmeasureid": ms[15],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -587,7 +594,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894616,
+		"worktaskmeasureid": ms[16],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -615,7 +622,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894617,
+		"worktaskmeasureid": ms[17],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -643,7 +650,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894618,
+		"worktaskmeasureid": ms[18],
 		"df": 0,
 		"measuretype": "sgfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -775,7 +782,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894581,
+		"worktaskmeasureid": ms[19],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -803,7 +810,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894582,
+		"worktaskmeasureid": ms[20],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -831,7 +838,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894583,
+		"worktaskmeasureid": ms[21],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -859,7 +866,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894584,
+		"worktaskmeasureid": ms[22],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -887,7 +894,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894585,
+		"worktaskmeasureid": ms[23],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -915,7 +922,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894586,
+		"worktaskmeasureid": ms[24],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -943,7 +950,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894587,
+		"worktaskmeasureid": ms[25],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -971,7 +978,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894588,
+		"worktaskmeasureid": ms[26],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -999,7 +1006,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894589,
+		"worktaskmeasureid": ms[27],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1027,7 +1034,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894590,
+		"worktaskmeasureid": ms[28],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1055,7 +1062,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894591,
+		"worktaskmeasureid": ms[29],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1083,7 +1090,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894592,
+		"worktaskmeasureid": ms[30],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1111,7 +1118,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894593,
+		"worktaskmeasureid": ms[31],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1139,7 +1146,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894594,
+		"worktaskmeasureid": ms[32],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1167,7 +1174,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894595,
+		"worktaskmeasureid": ms[33],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1195,7 +1202,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894596,
+		"worktaskmeasureid": ms[34],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1223,7 +1230,7 @@ data = {
 		"tempisconfirm": 0,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894597,
+		"worktaskmeasureid": ms[35],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1251,7 +1258,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894598,
+		"worktaskmeasureid": ms[36],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1279,7 +1286,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894599,
+		"worktaskmeasureid": ms[37],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1307,7 +1314,7 @@ data = {
 		"tempisconfirm": 1,
 		"created_dt": "2022-06-23 16:10:47",
 		"created_by": 2000000136186,
-		"worktaskmeasureid": 2000002894619,
+		"worktaskmeasureid": ms[38],
 		"df": 0,
 		"measuretype": "yzfzyfxjkzcs",
 		"tenantid": 2000000002404,
@@ -1571,7 +1578,7 @@ caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())
 
 caseinfo['id'] = 8
-caseinfo['name'] = '会签-3-监护人'
+caseinfo['name'] = '会签-4-监护人'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign
@@ -1652,7 +1659,7 @@ caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())
 
 caseinfo['id'] = 9
-caseinfo['name'] = '会签-3-审批人'
+caseinfo['name'] = '会签-5-审批人'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #/m/hse_m/HSE_WORK_TICKET_M/signAudit.json?workticketid=2000000097675&workType=xkz&worklevel=low_risk&datatype=sign&actionCode=sign&tabtype=sign
@@ -1728,6 +1735,182 @@ data = {
 		"person_name": "魏巍",
 		"userid": 2000000119297
 	}
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+
+caseinfo['id'] = 11
+caseinfo['name'] = '作业票关闭-1-施工方现场负责人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORKTASK_INJOB_M/saveCloseTicketAudit.json?actionCode=close&workticketid=2000000097675
+url = '/m/hse_m/HSE_WORKTASK_INJOB_M/saveCloseTicketAudit.json?actionCode=close&workticketid=%d'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"closeType": "completion",
+			"longitude": 117.1428,
+			"uuid": 1655982627896,
+			"idnumber": "",
+			"person_name": "魏巍",
+			"userid": 2000000119297,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"latitude": 31.835301,
+			"reason": "",
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍"
+		}],
+		"isEnd": 0,
+		"is_push_task": 0,
+		"longitude": 117.1428,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 0,
+		"isexmaineable": 1,
+		"code": "2000000015756",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 1,
+		"isbrushposition": 0,
+		"groupType": "4",
+		"name": "施工方现场负责人",
+		"latitude": 31.835301,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 1
+	}],
+	"closeType": "completion",
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"closeType": "completion",
+		"longitude": 117.1428,
+		"uuid": 1655982627896,
+		"idnumber": "",
+		"person_name": "魏巍",
+		"userid": 2000000119297,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"latitude": 31.835301,
+		"reason": "",
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍"
+	},
+	"reason": ""
+}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+
+caseinfo['id'] = 12
+caseinfo['name'] = '作业票关闭-2-业主方开票人'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#/m/hse_m/HSE_WORKTASK_INJOB_M/saveCloseTicketAudit.json?actionCode=close&workticketid=2000000097675
+url = '/m/hse_m/HSE_WORKTASK_INJOB_M/saveCloseTicketAudit.json?actionCode=close&workticketid=%d'%(xkzworkticketid)
+caseinfo['url'] = host+url
+#
+data = {
+	"auditPlainLineList": [{
+		"audittype": "card,face,localaccount",
+		"personList": [{
+			"person_type": "orgperson",
+			"closeType": "completion",
+			"longitude": 117.1428,
+			"uuid": 1655982753246,
+			"idnumber": "",
+			"person_name": "魏巍",
+			"userid": 2000000119297,
+			"user_type": "orgperson",
+			"personid": 2000000119297,
+			"latitude": 31.835301,
+			"reason": "",
+			"specialworktype": "",
+			"busdata": {
+				"cardnum": "DBB9B991",
+				"person_type": "orgperson",
+				"personid": 2000000119297,
+				"person_name": "魏巍",
+				"dataStatus": 0
+			},
+			"saveApprvoalInfo": "true",
+			"user_name": "魏巍"
+		}],
+		"isEnd": 1,
+		"is_push_task": 0,
+		"longitude": 117.1428,
+		"ischosereminder": 0,
+		"isinputidnumbermust": 0,
+		"ismustaudit": 1,
+		"force_photo": 0,
+		"idnumber": "",
+		"actiontype": "card",
+		"ismulti": 0,
+		"isexmaineable": 1,
+		"code": "2000000015757",
+		"dataStatus": 0,
+		"isShow": 1,
+		"isinputidnumber": 0,
+		"disporder": 2,
+		"isbrushposition": 0,
+		"groupType": "4",
+		"name": "业主方开票人",
+		"latitude": 31.835301,
+		"specialworktype": "",
+		"value": "",
+		"auditorder": 2
+	}],
+	"closeType": "completion",
+	"mainAttributeVO": {
+		"person_type": "orgperson",
+		"closeType": "completion",
+		"longitude": 117.1428,
+		"uuid": 1655982753246,
+		"idnumber": "",
+		"person_name": "魏巍",
+		"userid": 2000000119297,
+		"user_type": "orgperson",
+		"personid": 2000000119297,
+		"latitude": 31.835301,
+		"reason": "",
+		"specialworktype": "",
+		"busdata": {
+			"cardnum": "DBB9B991",
+			"person_type": "orgperson",
+			"personid": 2000000119297,
+			"person_name": "魏巍",
+			"dataStatus": 0
+		},
+		"saveApprvoalInfo": "true",
+		"user_name": "魏巍"
+	},
+	"reason": ""
 }
 caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())

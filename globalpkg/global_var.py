@@ -30,12 +30,10 @@ sql_query_ticket = sqls.ticket
 sql_query_ts = sqls.ts
 sql_query_worktaskid = sqls.worktaskid
 sql_query_worktaskid_in_ticketable = sqls.worktaskid_in_ticketable
-
 sql_query_work_appointid = sqls.sql_query_work_appointid
+sql_query_measureid = sqls.sql_query_measureid
 
 logger.info('开始数据库查询')
-
-
 
 #
 temp = testdb_test.select_one_record(sql_query_ticket)
@@ -67,6 +65,13 @@ sql_query__worktaskid1 = temp[0]
 #worktaskid
 worktaskid1 = sql_query__worktaskid1[0]
 print("table-hse_work_ticket:worktaskid1（现场确认）",worktaskid1)
+
+#
+temp = testdb_test.select_one_record(sql_query_measureid)
+sql_query__measureid = temp[0]
+#worktaskid
+measureid = sql_query__measureid [0]
+print("table-hse_work_task_measure:measureid （现场确认）",measureid)
 
 
 #

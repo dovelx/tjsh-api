@@ -19,7 +19,7 @@ def runmobile(testsuitm):
 
         caseinfo = testsuitm[i]
         logger.info("执行用例id=%s,name=%s",caseinfo['id'],caseinfo['name'] )
-
+        logger.info("data----%s",caseinfo['data'])
         result = method.pm(caseinfo, mheaders )
         logger.info("执行用例id=%s,name=%s执行结果%s", caseinfo['id'], caseinfo['name'],result)
 

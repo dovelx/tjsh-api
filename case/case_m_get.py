@@ -171,3 +171,30 @@ caseinfo['url'] = host+url
 data = {}
 caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())
+
+
+caseinfo['id'] = 11
+caseinfo['name'] = '现场确认-listQuery'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#https://tjsh.ushayden.com/m/hse_m/HSE_WORK_TICKET_GB_SGZY_M/listQuery.json?queryType=2&level=2&page=1&rows=10&queryParam=%7B%7D&extWhere=Q6Zaz3EfE6%2F5oXxRr29vzPBy2yiPTEll
+url = '/m/hse_m/HSE_WORK_TICKET_GB_SGZY_M/listQuery.json?queryType=2&level=2&page=1&rows=10&queryParam=%7B%7D&extWhere=Q6Zaz3EfE6%2F5oXxRr29vzPBy2yiPTEll'
+host='https://tjsh.ushayden.com'
+caseinfo['url'] = host+url
+#动火作业
+data = {}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+# caseinfo['id'] = 12
+# caseinfo['name'] = '作业处理-作业关闭'
+# caseinfo['isactive'] = 1
+# #拼写预约URL
+# #https://tjsh.ushayden.com/m/hse_m/HSE_WORK_TICKET_GB_SGZY_M/listQuery.json?queryType=2&level=2&page=1&rows=10&queryParam=%7B%7D&extWhere=Q6Zaz3EfE6%2F5oXxRr29vzPBy2yiPTEll
+# url = '/m/hse_m/HSE_WORKTASK_INJOB_M/closeTicketDisplay.json?workticketid=%d&workType=xkz&worklevel=low_risk&tabtype=close&auditfunccode=close'
+# host='https://tjsh.ushayden.com'
+# caseinfo['url'] = host+url
+# #动火作业
+# data = {}
+# caseinfo['data'] =data
+# testsuitmg.append(caseinfo.copy())

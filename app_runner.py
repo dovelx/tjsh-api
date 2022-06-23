@@ -66,17 +66,17 @@ logger.info('生成测试报告成功%s',name)
 #
 #     logger.info('生成测试报告成功')
 #
-#     mymail = MyMail('./config/mail.conf')
-#     mymail.connect()
-#     mymail.login()
-#     mail_content = 'Hi，附件为接口测试报告，烦请查阅'
-#     mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
-#     logger.info(html_report.get_filename())
-#     attachments = set([html_report.get_filename()])
-#
-#     logger.info('正在发送测试报告邮件...')
-#     mymail.send_mail(mail_tiltle, mail_content, attachments)
-#     mymail.quit()
-#
-#     logger.info('发送邮件成功')
-#     logger.info("-------------------------------------THE_END----------------------------------------------------------------------")
+mymail = MyMail('./config/mail.conf')
+mymail.connect()
+mymail.login()
+mail_content = 'Hi，附件为接口测试报告，烦请查阅'
+mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
+logger.info(html_report.get_filename())
+attachments = set([html_report.get_filename()])
+
+logger.info('正在发送测试报告邮件...')
+mymail.send_mail(mail_tiltle, mail_content, attachments)
+mymail.quit()
+
+logger.info('发送邮件成功')
+logger.info("-------------------------------------THE_END----------------------------------------------------------------------")

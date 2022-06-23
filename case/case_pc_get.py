@@ -655,3 +655,13 @@ caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
 testsuit.append(caseinfo.copy())
+
+caseinfo['id'] = 48
+caseinfo['name'] = 'PC-票证浏览'
+caseinfo['isactive'] = 1
+#https://tjsh.ushayden.com/rqreports/hse/HSE_WORK_TICKET_GC/reportCommonShow?rpx=HSE_PRESET_GCZY_GB_NTICKET.rpx&workticketid=2000000097610&worktype=gc&dzqm_url=http://hse.hayden.com:80&uuid=4fe165cade8f424b81d76271c83c33c9klItWhUnCrtsBLxyMmBdOSAhttncYL
+url = '/sy/SY_USER_PERSONAPTITUDE_HSE_PZR/cardAdd?parentEntityId=&parentFuncCode=&topEntityId=2000000019974&topFuncCode=SY_USER_PERSONAPTITUDE_HSE_PZR&dataId=2000000019974&0.4692925367905503&contentType=json&ajax=true&tid=2000000002404'
+caseinfo['url'] =host + url
+data = {}
+caseinfo['data'] =data
+#testsuit.append(caseinfo.copy())

@@ -134,7 +134,7 @@ def pd(caseinfo,headers):
 
 def pm(caseinfo,mheaders):
     '''移动端 post'''
-    rs = requests.post(url = caseinfo['url'],json=caseinfo['data'],headers=mheaders)
+    rs = requests.post(url = caseinfo['url'],json=caseinfo['data'],headers=mheaders,verify=False)
     if rs.status_code ==200:
         # 返回值转码
         data = rs.content.decode('utf-8')

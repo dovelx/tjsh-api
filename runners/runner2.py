@@ -125,7 +125,7 @@ def runmobileg(testsuitm):
     #__all__ = ['insert']
     #print(cookies)
     print('用例总数：',len(testsuitm))
-    mheaders = m_login.mllogin(1, 1, 1)
+    mheaders = m_login.mlogin(1, 1, 1)
     for i in range(len(testsuitm)):
 
         caseinfo = testsuitm[i]

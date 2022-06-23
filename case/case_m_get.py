@@ -147,11 +147,24 @@ caseinfo['data'] =data
 testsuitmg.append(caseinfo.copy())
 
 caseinfo['id'] = 10
-caseinfo['name'] = 'gfx-pzcj-/m/hse_m/HSE_WORKAPPLY_GB_M/cardAdd'
+caseinfo['name'] = '高风险作业-pzcj-/m/hse_m/HSE_WORKAPPLY_GB_M/cardAdd'
 caseinfo['isactive'] = 1
 #拼写预约URL
 #https://tjsh.ushayden.com/m/pub-base_m/a/getConfigs.json
 url = '/m/hse_m/HSE_WORKAPPLY_GB_M/cardAdd.json'
+host='https://tjsh.ushayden.com'
+caseinfo['url'] = host+url
+#动火作业
+data = {}
+caseinfo['data'] =data
+testsuitmg.append(caseinfo.copy())
+
+caseinfo['id'] = 10
+caseinfo['name'] = '作业预约-/m/hse_m/HSE_WORK_TICKET_GB_SGZY_ADD_M/getMetaData.json'
+caseinfo['isactive'] = 1
+#拼写预约URL
+#https://tjsh.ushayden.com/m/pub-base_m/a/getConfigs.json
+url = '/m/hse_m/HSE_WORK_TICKET_GB_SGZY_ADD_M/getMetaData.json'
 host='https://tjsh.ushayden.com'
 caseinfo['url'] = host+url
 #动火作业

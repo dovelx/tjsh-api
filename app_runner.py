@@ -1,12 +1,9 @@
 #天津石化作业许可-PC-预约-安全-申请-作业票提交
-from case.case_pc_post import  *
-from case.case_pc_get import *
-from case.case_m_get import *
-
+from case.case_m_pzsp import *
 from htmlreporter import HtmlReport
 from sendmail import MyMail
 import configparser
-from runners import runner3
+
 from runners import runner2
 from globalpkg.global_var import *
 
@@ -28,7 +25,7 @@ start_time = datetime.datetime.now()
 #PC-POST
 #runner3.runcase_post(testsuit_sgzyp)
 #mobile
-runner2.runmobileg(testsuitmg)
+runner2.runmobile(testsuitmg)
 # 记录测试结束时间
 end_time = datetime.datetime.now()
 # 构造测试报告

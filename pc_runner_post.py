@@ -1,7 +1,7 @@
 #天津石化作业许可-PC-预约-安全-申请-作业票提交
 from case.case_pc_post import  *
 from case.case_pc_get import *
-#from case.case_m_get import *
+from case.case_m_get import *
 
 from htmlreporter import HtmlReport
 from sendmail import MyMail
@@ -24,15 +24,15 @@ start_time = datetime.datetime.now()
 
 #执行测试
 #PC-GET
-runner3.runcase_producion(testsuit)
+#runner3.runcase_producion(testsuit)
 #PC-POST
-#runner3.runcase_post(testsuit_sgzyp)
+runner3.runcase_post(testsuit_sgzyp)
 #mobile
 #runner2.runmobileg(testsuitmg)
 # 记录测试结束时间
 end_time = datetime.datetime.now()
 # 构造测试报告
-html_report = HtmlReport('test report', '天津石化接口测试-PC端GET请求接口')
+html_report = HtmlReport('test report', '天津石化接口测试报告-PC端Post方法')
 html_report.set_time_took(str(end_time - start_time))  # 计算测试消耗时间
 
 # 读取测试报告路径及文件名
@@ -73,7 +73,7 @@ mymail = MyMail('./config/mail.conf')
 mymail.connect()
 mymail.login()
 mail_content = 'Hi，附件为接口测试报告，烦请查阅'
-mail_tiltle = '【天津石化接口测试】PC端Get请求-接口测试报告' + str(executed_history_id)
+mail_tiltle = '【天津石化接口测试】PC端Post方法-接口测试报告' + str(executed_history_id)
 logger.info(html_report.get_filename())
 attachments = set([html_report.get_filename()])
 

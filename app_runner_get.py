@@ -32,7 +32,7 @@ runner2.runmobileg(testsuitmg)
 # 记录测试结束时间
 end_time = datetime.datetime.now()
 # 构造测试报告
-html_report = HtmlReport('test report', 'tjsh_interface_autotest_report')
+html_report = HtmlReport('test report', '天津石化接口测试报告-移动端GET请求')
 html_report.set_time_took(str(end_time - start_time))  # 计算测试消耗时间
 
 # 读取测试报告路径及文件名
@@ -69,17 +69,17 @@ logger.info('生成测试报告成功%s',name)
 #
 #     logger.info('生成测试报告成功')
 #
-#     mymail = MyMail('./config/mail.conf')
-#     mymail.connect()
-#     mymail.login()
-#     mail_content = 'Hi，附件为接口测试报告，烦请查阅'
-#     mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
-#     logger.info(html_report.get_filename())
-#     attachments = set([html_report.get_filename()])
-#
-#     logger.info('正在发送测试报告邮件...')
-#     mymail.send_mail(mail_tiltle, mail_content, attachments)
-#     mymail.quit()
-#
-#     logger.info('发送邮件成功')
-#     logger.info("-------------------------------------THE_END----------------------------------------------------------------------")
+mymail = MyMail('./config/mail.conf')
+mymail.connect()
+mymail.login()
+mail_content = 'Hi，附件为接口测试报告，烦请查阅'
+mail_tiltle = '【天津石化接口测试】移动端Get请求-接口测试报告' + str(executed_history_id)
+logger.info(html_report.get_filename())
+attachments = set([html_report.get_filename()])
+
+logger.info('正在发送测试报告邮件...')
+mymail.send_mail(mail_tiltle, mail_content, attachments)
+mymail.quit()
+
+logger.info('发送邮件成功')
+logger.info("-------------------------------------THE_END----------------------------------------------------------------------")

@@ -29,7 +29,7 @@ runner2.runmobile(testsuitmg)
 # 记录测试结束时间
 end_time = datetime.datetime.now()
 # 构造测试报告
-html_report = HtmlReport('test report', 'tjsh_interface_autotest_report')
+html_report = HtmlReport('test report', '天津石化接口运行报告-施工票审批')
 html_report.set_time_took(str(end_time - start_time))  # 计算测试消耗时间
 
 # 读取测试报告路径及文件名
@@ -70,7 +70,7 @@ mymail = MyMail('./config/mail.conf')
 mymail.connect()
 mymail.login()
 mail_content = 'Hi，附件为接口测试报告，烦请查阅'
-mail_tiltle = '【测试报告】接口测试报告' + str(executed_history_id)
+mail_tiltle = '【天津石化接口测试】施工作业票APP端主流程-接口测试报告' + str(executed_history_id)
 logger.info(html_report.get_filename())
 attachments = set([html_report.get_filename()])
 

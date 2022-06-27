@@ -1,7 +1,7 @@
 #天津石化作业许可-PC-预约-安全-申请-作业票提交
 from case.case_pc_post import  *
 from case.case_pc_get import *
-from case.case_m_get import *
+#from case.case_m_get import *
 
 from htmlreporter import HtmlReport
 from sendmail import MyMail

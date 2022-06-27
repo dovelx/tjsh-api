@@ -347,7 +347,7 @@ url = '/hse/HSE_WORK_TICKET_GB_SGZY/wfSendShow?parentEntityId=&parentFuncCode=&t
 caseinfo['url'] =host + url
 data = {}
 caseinfo['data'] =data
-testsuit.append(caseinfo.copy())
+#testsuit.append(caseinfo.copy())
 
 caseinfo['id'] = 14
 caseinfo['name'] = 'jsa-hse/HSE_JSA_TEMPLETE_NEW/listQuery'

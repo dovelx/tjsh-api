@@ -108,7 +108,7 @@ def login():
     eq = json.loads(eq)
     #print(eq)
     #设置登录账号名和密码
-    USER_NAME = "weiw263"
+    USER_NAME = "dyy"
     password = "123456"
     # loginStoken = eq['data']['loginStoken']
     encryptType = eq['data']['encryptType']

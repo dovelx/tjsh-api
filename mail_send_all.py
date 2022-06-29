@@ -11,7 +11,7 @@ start_time = datetime.datetime.now()
 # 记录测试结束时间
 end_time = datetime.datetime.now()
 # 构造测试报告
-html_report = HtmlReport('test report', '天津石化接口测试')
+html_report = HtmlReport('test report', '天津石化接口测试报告')
 html_report.set_time_took(str(end_time - start_time))  # 计算测试消耗时间
 
 # 读取测试报告路径及文件名

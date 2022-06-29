@@ -84,15 +84,19 @@ def generate_timestamp_and_sign(secret):
 if __name__ == "__main__":
 
     import datetime
+    import global_result
     now = datetime.datetime.now().date()
+    executed_history_id = time.strftime('%Y%m%d', time.localtime())
     #send_ding_talk_notify_markdown(content_title, content_text, access_token, at_mobiles=[], secret=None, headers=None):
     # 获取dingtalk token url
-    #access_token = 'd1c7782d9e3cb687c018e1b08f503685ac7bb8490192cc6fb62bb7284760692b'
+    access_token = 'd1c7782d9e3cb687c018e1b08f503685ac7bb8490192cc6fb62bb7284760692b'
     #397939e6742eb8ef2d3a3c461574715d36ce95d717345d858a2f6f76a0d0b7b0
-    access_token = '397939e6742eb8ef2d3a3c461574715d36ce95d717345d858a2f6f76a0d0b7b0'
+    #access_token = '397939e6742eb8ef2d3a3c461574715d36ce95d717345d858a2f6f76a0d0b7b0'
     content_title = 'apitest'
+    res = global_result.CollectResult()
+    content_text =  str(now) + res  + ' 详情链接:https://1533963bv3.oicp.vip/test_report' + str(executed_history_id) + '.html'
     # 钉钉消息内容，注意test是自定义的关键字，需要在钉钉机器人设置中添加，这样才能接收到消息
-    content_text = '%s-天津石化API测试结果'%now
+    content_text = content_text
 
     # 要@的人的手机号，可以是多个，注意：钉钉机器人设置中需要添加这些人，否则不会接收到消息
     at_mobiles = ['所有人']
